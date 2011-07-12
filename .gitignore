@@ -1,0 +1,4 @@
+fdb.war
+war/FenixDomainBrowser/
+war/WEB-INF/classes/
+war/WEB-INF/deploy/
