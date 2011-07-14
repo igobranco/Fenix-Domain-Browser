@@ -8,6 +8,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -27,7 +28,7 @@ public class ClassSelected extends Composite implements RequiresResize {
 
     @UiField
     ScrollPanel scrollPanel;
-    
+
     @UiField
     VerticalPanel panel;
 
@@ -47,8 +48,8 @@ public class ClassSelected extends Composite implements RequiresResize {
 	    HorizontalPanel line = new HorizontalPanel();
 	    line.setVerticalAlignment(HorizontalPanel.ALIGN_MIDDLE);
 	    if (!Interface.currentState.getClassesToSee().contains(element)) {
-		final ToggleButton hide = new ToggleButton(new Image("icons/eye--minus.png"),
-			new Image("icons/eye--plus.png"));
+		final ToggleButton hide = new ToggleButton(new Image(FenixDomainBrowser.getContext() + "/icons/eye--minus.png"),
+			new Image(FenixDomainBrowser.getContext() + "/icons/eye--plus.png"));
 		if (Interface.currentState.getHideClasses().contains(element)) {
 		    hide.setDown(true);
 		}
@@ -67,9 +68,10 @@ public class ClassSelected extends Composite implements RequiresResize {
 		});
 
 		line.add(hide);
-	    }else{
-		final ToggleButton hide = new ToggleButton(new Image("icons/minus-button.png"),
-			new Image("icons/plus-button.png"));
+	    } else {
+		final ToggleButton hide = new ToggleButton(
+			new Image(FenixDomainBrowser.getContext() + "/icons/minus-button.png"), new Image(
+				FenixDomainBrowser.getContext() + "icons/plus-button.png"));
 		if (Interface.currentState.getHideClasses().contains(element)) {
 		    hide.setDown(true);
 		}
@@ -87,8 +89,9 @@ public class ClassSelected extends Composite implements RequiresResize {
 	    }
 
 	    if (!Interface.currentState.getHideAllSlots()) {
-		final ToggleButton slots = new ToggleButton(new Image("icons/document-attribute-e.png"), new Image(
-			"icons/document-list.png"));
+		final ToggleButton slots = new ToggleButton(new Image(FenixDomainBrowser.getContext()
+			+ "/icons/document-attribute-e.png"), new Image(FenixDomainBrowser.getContext()
+			+ "/icons/document-list.png"));
 		if (Interface.currentState.getHideSlots().contains(element)) {
 		    slots.setDown(true);
 		}
@@ -110,7 +113,8 @@ public class ClassSelected extends Composite implements RequiresResize {
 	    }
 
 	    if (Interface.currentState.getRelationExploration() && Interface.currentState.getClassesToSee().contains(element)) {
-		final ToggleButton other = new ToggleButton(new Image("icons/leaf.png"), new Image("icons/leaf-plant.png"));
+		final ToggleButton other = new ToggleButton(new Image(FenixDomainBrowser.getContext() + "/icons/leaf.png"),
+			new Image(FenixDomainBrowser.getContext() + "/icons/leaf-plant.png"));
 		if (Interface.currentState.getExclusiveSelection().contains(element)) {
 		    other.setDown(true);
 		}
@@ -147,8 +151,8 @@ public class ClassSelected extends Composite implements RequiresResize {
 	    HorizontalPanel line = new HorizontalPanel();
 	    line.setVerticalAlignment(HorizontalPanel.ALIGN_MIDDLE);
 
-	    final ToggleButton hide = new ToggleButton(new Image("icons/eye--minus.png"),
-			new Image("icons/eye--plus.png"));
+	    final ToggleButton hide = new ToggleButton(new Image(FenixDomainBrowser.getContext() + "/icons/eye--minus.png"),
+		    new Image(FenixDomainBrowser.getContext() + "/icons/eye--plus.png"));
 	    if (Interface.currentState.getHideClasses().contains(classBean)) {
 		hide.setDown(true);
 	    }
