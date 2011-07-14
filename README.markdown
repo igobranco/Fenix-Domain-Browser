@@ -1,19 +1,20 @@
-Fenix Domain Broswer 
+Fenix Domain Browser 
 ====================
 
 Fenix Domain Browser is a webapp to inspect domains described in the Fenix Framework DML. 
 
-Eclipse:
-mvn eclipse:clean eclipse:eclipse
 
-Compile the war:
-mvn clean package
+# Eclipse 
+'mvn eclipse:clean eclipse:eclipse'
 
-War generated on:
-target/fenixDomainBrowser-<version>.war
+# Compile the war:
+'mvn clean package'
 
-Copy the war to your servelet server of your choise, like Jetty or Tomcat.
+# War generated on:
+'target/fenixDomainBrowser-<version>.war'
 
---------
-isn't possible, for now, to run the application on dev using:
-mvn gwt:run
+#Copy the war to your servelet server of your choise, like Jetty or Tomcat.
+
+# Objectives to the future:
+Replace the graphiz with the yuml.me or other online uml tool.
+Run this app on Google App Engine.
