@@ -51,9 +51,9 @@
 		<dependency>
 			<groupId>fenix-framework</groupId>
 			<artifactId>fenix-framework</artifactId>
+			<version>r51754</version><!-- 
 			<scope>system</scope>
-			<version>r51754</version>
-			<systemPath>${basedir}/lib/fenix-framework-r51754.jar</systemPath>
+			<systemPath>${basedir}/lib/fenix-framework-r51754.jar</systemPath>-->
 		</dependency>
 		<dependency>
 			<groupId>antlr</groupId>
@@ -85,7 +85,7 @@
 				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin 
 					documentation at codehaus.org -->
 				<configuration>
-					<runTarget>FenixDomainBrowser.html</runTarget>  
+					<runTarget>Fdb2.html</runTarget>
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
 					<!-- <i18nMessagesBundle>pt.iscte.client.Messages</i18nMessagesBundle> -->
 				</configuration>
@@ -111,5 +111,12 @@
 
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>my</id>
+			<url>file://${basedir}/my-repo</url>
+		</repository>
+	</repositories>
 
 </project>
